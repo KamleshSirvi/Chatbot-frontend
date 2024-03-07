@@ -1,0 +1,123 @@
+
+.chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: 300px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* overflow: hidden; */
+    /* overflow-y: auto; */
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .chatbot-header {
+    background-color: #002239;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+    .chatbot-container > div {
+      padding: 10px;
+    }
+
+  .button{
+    background-color: #1c5977;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .button:hover{
+    background-color: #2980b9;
+  }
+
+  .chatbot-input{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user-input{
+    padding: 8px;
+    width: calc(100% - 18px);
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .chatbot-message-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    overflow-y: scroll;
+    height: 370px;
+
+  }
+
+  .tag-container{
+    display: flex;
+    gap: 5px;
+    padding-top: 20px;
+  }
+
+  .tag{
+    padding: 5px;
+    border: 1px solid rgb(3, 3, 71);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 50px;
+    font-size: 12px;
+  }
+
+  .tag:hover{
+    cursor: pointer;
+  }
+
+  .message{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .message-cont{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-tag-container{
+    background-color: #002239;
+    color: #fff;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+    align-self: flex-end;
+    font-size: 12px;
+    text-align: center;
+    width: 65px;
+  }
+
+  .bot-message-container{
+    background-color: #a9d4f0;
+    color: #000;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    width: 185px;
+    font-size: 12px;
+  }
+  
+ 
+  

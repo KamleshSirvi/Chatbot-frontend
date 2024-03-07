@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { FiMessageCircle } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import Chatbot from "./components/Chatbot";
 
 function App() {
+  const [chatbotOpen, setChatbotOpen] = useState(false);
+
+  const handleOpenBot = () => {
+    setChatbotOpen(!chatbotOpen);
+  };
+
+  useEffect(() => {
+    setChatbotOpen(true);
+    console.log(`render`);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Chatbot Frontend</h1>
+      <div className="button-container">
+        <button className="button-main" onClick={handleOpenBot}>
+          <FiMessageCircle size={30} />
+        </button>
+      </div>
+      <Chatbot isOpen={chatbotOpen} handleOpenBot={handleOpenBot} />
     </div>
   );
 }
